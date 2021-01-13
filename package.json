@@ -1,0 +1,11 @@
+{
+  "name": "table-project",
+  "version": "1.0.0",
+  "description": "Just practicing programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valentin Pyatenko",
+  "license": "ISC"
+}
