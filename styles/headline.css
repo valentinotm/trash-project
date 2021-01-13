@@ -1,0 +1,17 @@
+.headline-main {
+    text-align: center;
+    background-color: rgb(185, 213, 214);
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.headline-main:hover {
+    background-color: rgb(104, 173, 175);
+    transition: 1.5s;
+}
