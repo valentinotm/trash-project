@@ -8,8 +8,11 @@
   },
   "author": "Valentin Pyatenko",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "node-sass": "^5.0.0"
   }
 }
