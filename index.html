@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css">
-    <script src="scripts.js" type="module"></script>
+    <script src="scripts.js" type="module" defer></script>
     <title>HTML Table</title>
   </head>
   <body>
@@ -12,9 +12,32 @@
     <h1 class="headline-main">Sizing table</h1>
 
     <!-- Paragraph for array -->
-    <div class="arrays">
-        <p class="array" id="array"></p>
-        <button class="array-button" id="array-button">Click to change array.</button>
+    <div class="arrays-div">
+        <!-- Arrays of car -->
+        <div>
+            <p class="inline-block">Electric cars: </p>
+            <p class="electric-cars inline-block"></p>
+        </div>
+        <div>
+            <p class="inline-block">Diesel cars: </p>
+            <p class="diesel-cars inline-block"></p>
+        </div>
+        <div>
+            <p class="inline-block">Sport cars: </p>
+            <p class="sport-cars inline-block"></p>
+        </div>
+        
+        
+        <!-- Arrays results -->
+        <p class="resulted-array" id="resulted-array"></p>
+
+
+        <!-- Array buttons -->
+        <button class="array-button" id="concat-button" value="Concat arrays">Click to concat arrays</button>
+        <button class="array-button" id="copywithin-button">Right click to copy within</button>
+        <button class="array-button" id="copywithin-button-two">Double click to copy within</button>
+        <button class="array-button" id="create-iterator-button">Mouse down to create iterator object</button>
+
     </div>
 
     <!-- HTML table -->
