@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="teslas.js" type="module"></script>
     <script src="scripts.js" type="module" defer></script>
     <title>HTML Table</title>
   </head>
   <body>
+
+    <!-- Navigation menu -->
+    <nav class="navigation-bar">
+        <ul class="nav-list">
+            <li class="nav-list__item"><a href="#" class="nav-list__link">Menu item 1</a></li>
+            <li class="nav-list__item"><a href="#" class="nav-list__link">Menu item 2</a></li>
+            <li class="nav-list__item"><a href="#" class="nav-list__link">Menu item 3</a></li>
+            <li class="nav-list__item"><a href="#" class="nav-list__link">Menu item 4</a></li>
+            <li class="nav-list__item"><a href="#" class="nav-list__link">Menu item 5</a></li>
+        </ul>
+    </nav>
     <!-- Headline -->
-    <h1 class="headline-main">Sizing table</h1>
+    <h1 class="headline-main" id="main-headline">Sizing table</h1>
 
     <!-- Paragraph for array -->
     <div class="arrays-div">
@@ -37,7 +49,10 @@
         <button class="array-button" id="copywithin-button">Right click to copy within</button>
         <button class="array-button" id="copywithin-button-two">Double click to copy within</button>
         <button class="array-button" id="create-iterator-button">Mouse down to create iterator object</button>
-
+        <button class="array-button" id="check-every-arr-item">Check every array item</button>
+        <!-- <button class="array-button" id="check-teslas-array" onclick="checkTeslas()">Check if every item is tesla</button> -->
+        <button class="array-button" id="fill-array">Fill array values</button>
+        <button class="array-button" id="fill-array-specific-position">Fill values to specific possitions</button>
     </div>
 
     <!-- HTML table -->
@@ -99,5 +114,11 @@
           </tr>
       </tfoot>
     </table>
+
+    <!-- Age checker -->
+
+    <label for="age-checker">Enter your age:</label>
+    <input type="text" id="age-checker" value="18">
+
   </body>
 </html>

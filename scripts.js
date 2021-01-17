@@ -1,3 +1,4 @@
+"use strict";
 
 // Provided arrays
 let electricCars = ["Volvo", "Tesla", "Audi", "Nikola", "Lucid"];
@@ -29,9 +30,7 @@ try {
         let copiedCars = dieselCars.copyWithin(0, 1, dieselCars.length - 1);
         paragForArr.innerHTML = copiedCars;
     });
-} 
-
-catch(error) {
+} catch(error) {
     console.log(error.name);
     console.log(error.message);
 };
@@ -46,14 +45,111 @@ try {
         for (const carBrand of sportCarsIteratorObject) {
             console.log(`${x}. Car brand: ${carBrand}`);
             x = x + 1;
-        }
+        };
     });
-}
-
-catch(error) {
+} catch (error) {
     console.log(error.name);
     console.log(error.message);
+};
+
+// Check array with a provided function with JS "every()" method. 
+// If every of these items equal this value it returns true if not, false.
+
+function checkBrand(carBrand) {
+    if (carBrand == "Tesla" || carBrand == "Nikola" || carBrand == "Lucid") {
+        return carBrand;
+    };
+};
+
+
+try {
+    document.getElementById("check-every-arr-item").addEventListener("mouseenter", function() {
+        paragForArr.innerHTML = electricCars.every(checkBrand);
+    });
+} catch(error) {
+    alert(error.name);
+    alert(error.message);
+};
+
+// Age checker --------------------------------------
+
+// function ageChecker() {
+//     let ages = [12, 43, 65, 34, 78, 89, 17, 19, 23];
+//     let inputAge = document.getElementById("age-checker").
+    
+//     function checkAge(age) {
+//         if (age >= 18) {
+//             return age;
+//         }
+//     }
+// };
+
+// console.log(ages);
+
+
+// End of age checher -------------------------------
+
+// Fill sportCars array with "Tesla" values
+document.getElementById("fill-array").addEventListener("mouseout", function fillWithTeslas() {
+    let teslaArr = sportCars.fill("Tesla");
+    paragForArr.innerHTML = teslaArr;
+});
+
+// Fill array from to
+document.getElementById("fill-array-specific-position").addEventListener("click", function() {
+    let arrayOfNumbers = [12, 32, 4532, 542, 532, 8, 542, 81, 99, 789432, 432, 542];
+    let filteredArray = arrayOfNumbers.filter(function(number) {
+        if (number == 542) {
+            return number;
+        }
+    });
+    console.log(`Filtered array from array of numbers: ${filteredArray}`);
+
+    filteredArray.every(function(value) {
+        value === 542;
+        filteredArray.fill("18");
+        console.log(`Filtered array after filling: ${filteredArray}.`)
+    });
+
+    let mapedArray = arrayOfNumbers.map(function(value) {
+        if (value === 542) {
+            value = 18;
+        }
+        return value;
+    })
+    console.log(mapedArray);
+});
+
+// Convert an array to string 
+
+let arrayOfSomething = ["string", false, 43, null, undefined, 45, "", "Valentin"];
+let stringifiedArray;
+
+function convertArrayToString() {
+    stringifiedArray = arrayOfSomething.toString();
+    console.log(`This is a stringified array: ${stringifiedArray}`);
+};
+
+document.addEventListener("click", convertArrayToString);
+
+document.getElementById("main-headline").addEventListener("click", pressedButtons);
+
+function pressedButtons(event) {
+    if (event.button === 0) {
+        alert(`You pressed the left button.`);
+    } else if (event.button == 2) {
+        alert(`You pressed the right button.`);
+    } else if (event.button === 1) {
+        alert(`You have used scroll button.`);
+    } else {
+        alert(`You did't press any button.`)
+    }
+    console.log(event);
 }
+
+
+
+
 
 
 

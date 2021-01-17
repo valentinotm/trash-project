@@ -1,0 +1,5 @@
+@import "./table.css" all;
+@import "./headline.css" all;
+@import "./common.css" all;
+@import "./navigation.css" all;
+@use './_navigation.scss' all;

@@ -1,0 +1,25 @@
+.navigation-bar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #aef8df; }
+
+.nav-list {
+  list-style-type: none; }
+
+.nav-list__item {
+  display: inline-block;
+  padding: 15px 15px 30px 15px;
+  background-color: #212121;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  margin: 0; }
+
+.nav-list__item:hover {
+  background-color: #424242;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; }
+
+.nav-list__link {
+  color: white;
+  text-decoration: none; }
